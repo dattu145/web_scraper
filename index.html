@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Scraper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <section class="wrapper">
+        <div class="des">
+        <h1>Web Scraper <i class="fa-regular fa-share-from-square"></i></h1>
+        <p>A web scraper is a tool that automatically extracts data from websites by sending requests, retrieving HTML content, parsing it to identify specific information, and organizing the data for further use.</p>
+        <div class="links">
+            <a href="https://en.wikipedia.org/wiki/Web_scraping" target="_blank">know More..<i class="fa-solid fa-earth-asia"></i></a>
+            <a href="#" target="_blank">Access Project..<i class="fa-brands fa-github"></i></a>
+            <a href="https://my-portfolio-2zpt.onrender.com/" target="_blank">My Portfolio..<i class="fa-solid fa-user"></i></a>
+            <div class="light_mode" onclick="theme()"><i class="fa-solid fa-sun-plant-wilt"></i></div>
+        </div>    
+    </div>
+        <form action="#">
+            <input type="text" placeholder="Enter a valid Url" id="url">
+            <div class="options">
+                <div class="radios">
+                    <div class="opt"><input type="radio" name="options" id="1" value="1"><label for="1">Extract Entire HTML Code</label></div>
+                    <div class="opt"><input type="radio" name="options" id="2" value="2"><label for="2">Extract Entire Text</label></div>
+                    <div class="opt"><input type="radio" name="options" id="3" value="3"><label for="3">Extract only Headings</label></div>
+                    <div class="opt"><input type="radio" name="options" id="4" value="4"><label for="4">Extract all Links</label></div>
+                </div>
+                <div class="manualext">
+                    <div class="opt"><input type="radio" name="options" id="5" value="5"><label for="5">Extract using Tag Names : (Eg., h2,p,span)</label></div>
+                    <input  type="text" id="tagn" placeholder="Input Tag Name">
+                </div>
+            </div>
+        </form>
+        <button id="extractbtn">Extract<i class="fa-solid fa-arrow-turn-down"></i></button>
+        <div class="output">
+            <div class="extracted-content">
+                <div class="cpy">copy <i class="fa-solid fa-copy"></i></div>
+                <pre id="extractedText"></pre>
+            </div>
+        </div>
+    </section>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

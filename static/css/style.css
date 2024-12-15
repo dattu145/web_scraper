@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --h1-fs: 2.2rem;
+    --h2-fs: 2rem;
+    --h3-fs: 1.8rem;
+    --smaller-fs: 0.9rem;
+    --normal-fs: 1rem;
+    --medium-fs: 1.2rem;
+    --bigger-fs: 1.4rem;
+
+    --body-bg: rgb(58, 43, 43);
+    --title-color: rgb(238, 230, 230);
+    --skin-color: rgb(231, 194, 194);
+    --box-color: rgba(255,255,255,0.1);
+    --radio-color: rgb(201, 99, 99);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background: var(--body-bg);
+}
+.light_mode{
+    cursor:pointer;
+    border-radius: 2px;
+    transition: .2s;
+}
+.light_mode:hover{
+    color: var(--skin-color);
+}
+.light_mode_active{
+    --body-bg: rgb(226, 221, 221);
+    --title-color: rgb(58, 43, 43);
+    --skin-color: rgb(96, 65, 155);
+    --box-color: rgba(106, 72, 199, 0.1);
+    --radio-color: rgb(75, 57, 182);
+}
+section{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem;
+}
+p{
+    font-size: var(--normal-fs);
+}
+i{
+    margin-left: .5rem;
+}
+.links{
+    display: flex;
+    gap: .5rem 5rem;
+    flex-wrap: wrap;
+}
+a{
+    width: max-content;
+    text-decoration: none;
+    color: var(--skin-color);
+}
+a:hover{
+    text-decoration:overline;
+}
+.wrapper,.des{
+    display:flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    color: var(--title-color);
+}
+h1{
+    font-size: var(--h1-fs);
+    text-align: center;
+    font-weight: 400;
+    font-size: clamp(1.6rem,2.2rem,5vw);
+}
+form,.manualext,.radios{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+.options{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.radios{
+    row-gap: .5rem;
+}
+.opt{
+    display: flex;
+    column-gap: .5rem;
+}
+input[type="text"]{
+    padding: .4rem .5rem;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border: 2px solid var(--box-color);
+    color: var(--title-color);
+}
+#tagn{
+    max-width: 200px;
+    width: 100%;
+    background: rgb(238, 230, 230);
+    color: rgb(58, 43, 43);
+    padding: .2rem .5rem;
+}
+button{
+    width: max-content;
+    padding: .2rem .5rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 2px;
+    border: 1px solid var(--title-color);
+    transition: .1s;
+    color: black;
+}
+button:hover{
+    background: transparent;
+    color: var(--title-color);
+    border-color: var(--skin-color);
+}
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  padding-left: 30px; 
+  cursor: pointer;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--body-bg);
+  border-radius: 50%;
+  background-color: #fff;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="radio"]:checked + label::before {
+  background-color: var(--radio-color);
+  border-color: var(--title-color);
+}
+.extracted-content {
+    position: relative;
+    display: none;
+    background-color: var(--title-color);
+    padding: 0 20px;
+    color: var(--body-bg);
+    margin: .5rem;
+    overflow: auto;
+    font-family: monospace;
+    white-space: pre-wrap;
+    max-height: 500px;
+    word-wrap: break-word;
+    font-size: var(--smaller-fs);
+    border-radius: 5px;
+}
+.extracted-content pre {
+    margin: 0;
+    white-space: pre-wrap;
+}
+.cpy{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    background: var(--body-bg);
+    color: var(--title-color);
+    padding: .2rem .5rem;
+    font-size: 10px;
+    border-radius: 2px;
+    cursor:pointer;
+}
+.cpy:hover{
+    background: var(--skin-color);
+    color: var(--body-bg);
+}
+
+@media only screen and (max-width: 480px){
+    a{
+        font-size: var(--smaller-fs);
+    }
+    section{
+        padding: 1.5rem;
+    }
+    .opt{
+        font-size: var(--smaller-fs);
+    }
+    p{
+        font-size: .9rem;
+    }
+    .extracted-content{
+        margin: 0;
+    }
+}
