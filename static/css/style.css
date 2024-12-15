@@ -20,6 +20,8 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
     font-family: "Poppins", sans-serif;
 }
 body{
