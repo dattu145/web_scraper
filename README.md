@@ -9,30 +9,30 @@ A simple web scraper built using Flask that allows users to extract data from we
 
 ### Libraries Required :
 
-##### 1. Requests
+##### 1. requests
 
 Purpose: Simplifies making HTTP requests (GET, POST, PUT, DELETE, etc.).
 Use Cases: Fetching data from APIs, scraping basic web content.
 
-##### 2. Validators
+##### 2. validators
 
 Purpose: Validates data such as URLs, email addresses, and IPs.
 Use Cases: Ensure URLs entered by users are valid.
 
-##### 3. BeautifulSoup4
+##### 3. beautifulSoup4
 
 Purpose: Parses HTML/XML content and makes web scraping easier.
 Use Cases: Extracting specific data from web pages.
 
-##### 4. Lxml
+##### 4. lxml
 
 Purpose: A powerful library for parsing XML and HTML with high performance.
 Use Cases: Parsing large or complex HTML/XML documents.
 
-##### 5. Flask
+##### 5. flask
 
-Purpose: A lightweight web framework for building web applications.
-Use Cases: Create REST APIs, serve HTML pages, build dashboards.
+Purpose: A lightweight web framework for building web applications
+Use Cases: Create REST APIs, serve HTML pages, build dashboards
 
 Install all the listed libraries by executing "pip install -r requirements.txt"
 
