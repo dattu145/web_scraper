@@ -24,7 +24,7 @@ A powerful library for parsing XML and HTML with high performance.
 ##### 5. flask
 A lightweight web framework for building web application
 
-Install all the listed libraries by executing "pip install -r requirements.txt"
+- Install all the listed libraries by executing "pip install -r requirements.txt"
 
 ---
 
