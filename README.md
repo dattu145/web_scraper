@@ -25,4 +25,4 @@ A simple web scraper built using Flask that allows users to extract data from we
    python app.py
   ```
 ### 4. Open your browser and navigate to the localhost with port 5000:
-   [[http://127.0.0.1:5000]]
+   http://127.0.0.1:5000
